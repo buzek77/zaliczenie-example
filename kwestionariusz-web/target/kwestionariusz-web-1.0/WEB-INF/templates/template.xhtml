@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+    
+    <h:head>		
+        <h:outputStylesheet library="css" name="main.css" />
+        <h:outputStylesheet library="css" name="admin.css" />
+    </h:head>
+    
+	<h:body>
+    	
+    	<h:form id="menu_form">
+
+			<div id="wrapper">
+				<div id="header">
+					<div class="naglowek">Kwestionariusz rejestracji na strudia</div>
+					<div class="login">
+				    	Jesteś zalogowany jako <span class="user_login"> <!-- <h:outputText value="#{backendUserBean.userName}" /> --> ghshdfhgd </span>
+				    	<!--  <h:commandLink action="#{backendUserBean.logout}" value="wyloguj" /> -->
+				    	<h:commandLink action="wyloguj" value="wyloguj" /> 				    	
+				  	</div>
+				<!--comment-->
+			</div>
+
+				<div id="main">
+					<div id="menu">
+							<a href="" class="head" id="menu1">Zarządzanie</a>
+							<div class="menu_list" id="menu1_list">
+								<h:commandLink action="add" value="Dodaj news" />
+								<a href="news-list.xhtml">Lista newsów</a>
+							</div> 
+			
+							<!--
+			
+							<h:commandLink class="dir" action="#{backendUserBean.changePassword}" value="Zmiana hasła" />
+							<h:commandLink class="dir" action="#{backendUserBean.logout}" value="Wyloguj się" />
+							
+							 -->
+							
+							<br /><br />
+							
+							<!-- pusty blok -->
+							<div id="menu_emptyblock">&nbsp;</div>
+														
+							<!--  <h:graphicImage value="/img/java_duke.gif" />  -->
+							
+					</div>
+	
+					<div id="content">
+						<ui:include src="/header.xhtml"/>
+						
+		                <ui:insert name="content">
+		                     Default Content
+		                </ui:insert>
+		                       		
+		        	</div>
+	
+					<!--  <div class="clear"></div>    -->
+				</div>				
+		
+				<!-- footer -->
+				<ui:include src="/footer.xhtml"/>				
+			</div><!-- wrapper -->
+		</h:form>
+  
+	</h:body>
+</html>

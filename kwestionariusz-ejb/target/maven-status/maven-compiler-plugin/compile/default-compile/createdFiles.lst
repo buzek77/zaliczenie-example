@@ -1,0 +1,3 @@
+paw\news\jpa\News.class
+paw\news\ejb\NewsBean.class
+paw\news\ejb\MobileBean.class
